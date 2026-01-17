@@ -1,5 +1,13 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768633065
-icon.svg::CompressedTexture2D::5907701813297238094::1768632816::1768633065::1::::<><><>0<>0<>c662413417d73d4e10024e4853c8e85f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://::1768633718
 LICENSE.md::TextFile::-1::1768632912::0::1::::<><><>0<>0<><>::
+player.tscn::PackedScene::5620432257633825283::1768633718::0::1::::<><><>0<>0<><>::uid://cqfy8rrqp8wne::::res://Assets/icon.svg<>uid://c8vjldlfbfscr::::res://Scripts/player.gd
 README.md::TextFile::-1::1768632912::0::1::::<><><>0<>0<><>::
+::res://Assets/::1768633224
+icon.svg::CompressedTexture2D::5907701813297238094::1768632816::1768633224::1::::<><><>0<>0<>95df70ccf2910fb2ad437b5f049dc68b<>res://.godot/imported/icon.svg-8193eb3d66a1b5143b8bb4c28c1dc139.ctex::
+::res://Scenes/::1768633710
+main.tscn::PackedScene::6877680605780300342::1768633720::0::1::::<><><>0<>0<><>::uid://cmctx0bhktukh::::res://player.tscn
+::res://Scripts/::1768633718
+player.gd::GDScript::7132991411736007989::1768633567::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Tiles/::1768633221
+::res://UI/::1768633211
