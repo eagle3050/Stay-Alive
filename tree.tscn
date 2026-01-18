@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://mojn1v27vs35"]
+
+[ext_resource type="Texture2D" uid="uid://jgxly14umbig" path="res://Assets/TinyRanch_Assets/TinyFarm_MapDecorations.png" id="1_brfkd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_brfkd"]
+radius = 4.2426405
+
+[node name="Tree" type="StaticBody2D"]
+z_index = 10
+collision_layer = 2
+
+[node name="Holder" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Holder"]
+texture = ExtResource("1_brfkd")
+region_enabled = true
+region_rect = Rect2(50, 16, 12, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_brfkd")

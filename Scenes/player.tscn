@@ -1,19 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmctx0bhktukh"]
+[gd_scene load_steps=8 format=3 uid="uid://cmctx0bhktukh"]
 
-[ext_resource type="Texture2D" uid="uid://cqfy8rrqp8wne" path="res://Assets/icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://c8vjldlfbfscr" path="res://Scripts/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://nk6ivtouhn2s" path="res://Assets/TinyRanch_Assets/TinyFarm_Characters.png" id="2_cvnsp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0iea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}],
+"loop": true,
+"name": &"side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqql")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
-radius = 4.0
+radius = 3.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 2
 script = ExtResource("1_onrkg")
 
 [node name="Holder" type="Node2D" parent="."]
-scale = Vector2(0.065, 0.065)
 
-[node name="Sprite2D" type="Sprite2D" parent="Holder"]
-texture = ExtResource("1_4flbx")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Holder"]
+position = Vector2(-1.9073486e-06, -1.9073486e-06)
+sprite_frames = SubResource("SpriteFrames_v0iea")
+animation = &"side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4flbx")
