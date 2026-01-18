@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://j573r3fpylb3"]
+
+[ext_resource type="Script" uid="uid://00k0a0v0bxyw" path="res://ui.gd" id="1_fyqef"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_fyqef")
+
+[node name="Stats" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Hunger" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 87.0
+offset_bottom = 23.0
+text = "Hunger: 99"
+
+[node name="Thirst" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 29.0
+offset_right = 74.0
+offset_bottom = 52.0
+text = "Thirst: 99"
+
+[node name="Health" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 55.0
+offset_right = 72.0
+offset_bottom = 78.0
+text = "Health: 9"

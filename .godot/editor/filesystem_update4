@@ -1,1 +1,6 @@
+res://Scenes/player.tscn
+res://Scenes/survival_stats.gd
+res://Scripts/player.gd
 res://Scenes/main.tscn
+res://ui.tscn
+res://ui.gd

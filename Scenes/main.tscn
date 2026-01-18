@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c48unokxilikk"]
+[gd_scene load_steps=7 format=3 uid="uid://c48unokxilikk"]
 
 [ext_resource type="Texture2D" uid="uid://b2eigc7bao5bw" path="res://Assets/TinyRanch_Assets/TinyFarm_Tiles.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://cmctx0bhktukh" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://mojn1v27vs35" path="res://tree.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://j573r3fpylb3" path="res://ui.tscn" id="4_jjvhh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("1_bo1nx")
@@ -378,3 +379,5 @@ position = Vector2(-99, -93)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4.5, 4.5)
 position_smoothing_enabled = true
+
+[node name="UI" parent="." instance=ExtResource("4_jjvhh")]

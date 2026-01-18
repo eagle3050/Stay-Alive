@@ -9,7 +9,6 @@ func _process(_delta: float) -> void:
 	velocity = direction * speed
 	move_and_slide()
 
-
 func handle_anim():
 	if Input.is_action_just_pressed("left"):
 		animated_sprite.play("side")
@@ -17,7 +16,6 @@ func handle_anim():
 	elif Input.is_action_just_pressed("right"):
 		animated_sprite.play("side")
 		animated_sprite.flip_h = false
-	
 	if Input.is_action_just_pressed("down"):
 		animated_sprite.play("down")
 	elif Input.is_action_just_pressed("up"):

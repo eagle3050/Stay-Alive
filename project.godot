@@ -15,6 +15,10 @@ run/main_scene="uid://c48unokxilikk"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+GlobalStats="*res://Scripts/GlobalStats.gd"
+
 [input]
 
 up={
