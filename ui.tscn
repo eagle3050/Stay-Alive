@@ -33,3 +33,19 @@ offset_top = 55.0
 offset_right = 72.0
 offset_bottom = 78.0
 text = "Health: 9"
+
+[node name="Cold" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 89.0
+offset_right = 72.0
+offset_bottom = 112.0
+text = "Cold"
+
+[node name="DayCounter" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 125.0
+offset_right = 72.0
+offset_bottom = 148.0
+text = "Day: 99"

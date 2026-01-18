@@ -64,7 +64,7 @@ shape = SubResource("CircleShape2D_4flbx")
 script = ExtResource("3_6t5aa")
 
 [node name="DecreaseTimer" type="Timer" parent="SurvivalStats"]
-wait_time = 0.009999999999999998
+wait_time = 0.5
 autostart = true
 ignore_time_scale = true
 

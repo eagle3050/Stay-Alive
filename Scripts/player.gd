@@ -20,3 +20,7 @@ func handle_anim():
 		animated_sprite.play("down")
 	elif Input.is_action_just_pressed("up"):
 		animated_sprite.play("up")
+
+func die():
+	hide()
+	print("dead")

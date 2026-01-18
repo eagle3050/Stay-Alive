@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c48unokxilikk"]
+[gd_scene load_steps=8 format=3 uid="uid://c48unokxilikk"]
 
 [ext_resource type="Texture2D" uid="uid://b2eigc7bao5bw" path="res://Assets/TinyRanch_Assets/TinyFarm_Tiles.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://cmctx0bhktukh" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://dg1adhqevcy1a" path="res://Scenes/main.gd" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://mojn1v27vs35" path="res://tree.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://j573r3fpylb3" path="res://ui.tscn" id="4_jjvhh"]
 
@@ -96,6 +97,7 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_bo1nx")
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_kry3j")
 
 [node name="World" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_jjgbg")
@@ -374,10 +376,30 @@ position = Vector2(-150, -89)
 [node name="Tree90" parent="World/Trees" instance=ExtResource("3_8gbba")]
 position = Vector2(-99, -93)
 
+[node name="DayTimer" type="Timer" parent="World"]
+wait_time = 5.0
+one_shot = true
+
+[node name="NightTimer" type="Timer" parent="World"]
+wait_time = 15.0
+one_shot = true
+
 [node name="Player" parent="." instance=ExtResource("1_jjgbg")]
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4.5, 4.5)
 position_smoothing_enabled = true
 
+[node name="Night" type="ColorRect" parent="Player/Camera2D"]
+visible = false
+z_index = 99
+offset_left = -128.0
+offset_top = -74.0
+offset_right = 129.0
+offset_bottom = 72.0
+color = Color(0, 0, 0, 0.7254902)
+
 [node name="UI" parent="." instance=ExtResource("4_jjvhh")]
+
+[connection signal="timeout" from="World/DayTimer" to="." method="_on_day_timer_timeout"]
+[connection signal="timeout" from="World/NightTimer" to="." method="_on_night_timer_timeout"]
