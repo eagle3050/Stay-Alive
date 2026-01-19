@@ -1,9 +1,20 @@
 extends CharacterBody2D
 
+@export var inv: Inv
 var speed = 100
+var campfire_selected = false
 @onready var animated_sprite: AnimatedSprite2D = $Holder/AnimatedSprite2D
 
+
+
+
+
+
+
+
+
 func _process(_delta: float) -> void:
+	placing_items()
 	handle_anim()
 	var direction = Input.get_vector("left", "right", "up", "down").normalized()
 	velocity = direction * speed
@@ -25,10 +36,15 @@ func die():
 	hide()
 	print("dead")
 	
-func placing_campfire():
-	var campfire = preload("res://campfire.tscn")
+func placing_items():
+	
+	var campfire = preload("res://Scenes/campfire.tscn")
 	#INVERTORY CHECKING IF ENOUGH MATERIALS LOGIC
-	if Input.is_action_just_pressed("place"): #AND ENOUGH MATERIALS
+	if Input.is_action_just_pressed("1"):
+		print("selectg")
+		campfire_selected = true
+	if Input.is_action_just_pressed("place") and campfire_selected: #AND ENOUGH MATERIALS
 		var campfire_scene = campfire.instantiate()
-		campfire_scene.global_position = get_global_mouse_position()
-		get_parent().add_child(campfire)
+		var mouse_pos = get_global_mouse_position()
+		campfire_scene.global_position = mouse_pos
+		get_parent().add_child(campfire_scene)

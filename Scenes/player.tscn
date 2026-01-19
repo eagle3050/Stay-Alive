@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmctx0bhktukh"]
+[gd_scene load_steps=11 format=3 uid="uid://cmctx0bhktukh"]
 
 [ext_resource type="Script" uid="uid://c8vjldlfbfscr" path="res://Scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://nk6ivtouhn2s" path="res://Assets/TinyRanch_Assets/TinyFarm_Characters.png" id="2_cvnsp"]
-[ext_resource type="Script" uid="uid://bkvaqqsba4e2e" path="res://Scenes/survival_stats.gd" id="3_6t5aa"]
+[ext_resource type="Resource" uid="uid://cmum3kx1kv4xn" path="res://invertory/player_inv.tres" id="2_vgqql"]
+[ext_resource type="Script" uid="uid://bkvaqqsba4e2e" path="res://Scripts/survival_stats.gd" id="3_6t5aa"]
+[ext_resource type="PackedScene" uid="uid://c1lsuiviqmkmb" path="res://invertory/intertory_ui.tscn" id="5_fkybt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
 atlas = ExtResource("2_cvnsp")
@@ -49,6 +51,7 @@ radius = 3.0
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_mask = 2
 script = ExtResource("1_onrkg")
+inv = ExtResource("2_vgqql")
 
 [node name="Holder" type="Node2D" parent="."]
 
@@ -73,6 +76,13 @@ ignore_time_scale = true
 
 [node name="ColdHealthTimer" type="Timer" parent="SurvivalStats"]
 ignore_time_scale = true
+
+[node name="Intertory_UI" parent="." instance=ExtResource("5_fkybt")]
+z_index = 99
+offset_left = -22.0
+offset_top = -56.0
+offset_right = 22.0
+offset_bottom = -5.0
 
 [connection signal="timeout" from="SurvivalStats/DecreaseTimer" to="SurvivalStats" method="_on_decrease_timer_timeout"]
 [connection signal="timeout" from="SurvivalStats/HealthTimer" to="SurvivalStats" method="_on_health_timer_timeout"]

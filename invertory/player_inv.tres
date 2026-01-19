@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=4 format=3 uid="uid://cmum3kx1kv4xn"]
+
+[ext_resource type="Script" uid="uid://c3vgrmc4ewghj" path="res://invertory/invertory_item.gd" id="1_38u2j"]
+[ext_resource type="Resource" uid="uid://tx5a2oy8kaxc" path="res://invertory/items/campfire.tres" id="2_5qhjk"]
+[ext_resource type="Script" uid="uid://bltdhapudg5v3" path="res://invertory/invertory.gd" id="3_06tn5"]
+
+[resource]
+script = ExtResource("3_06tn5")
+items = Array[ExtResource("1_38u2j")]([null, null, ExtResource("2_5qhjk"), null, null, null, null, null, null, null, ExtResource("2_5qhjk"), null])
+metadata/_custom_type_script = "uid://bltdhapudg5v3"

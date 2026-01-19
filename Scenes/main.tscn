@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://b2eigc7bao5bw" path="res://Assets/TinyRanch_Assets/TinyFarm_Tiles.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://cmctx0bhktukh" path="res://Scenes/player.tscn" id="1_jjgbg"]
-[ext_resource type="Script" uid="uid://dg1adhqevcy1a" path="res://Scenes/main.gd" id="1_kry3j"]
-[ext_resource type="PackedScene" uid="uid://mojn1v27vs35" path="res://tree.tscn" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://j573r3fpylb3" path="res://ui.tscn" id="4_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://btic7i3tl4ds8" path="res://campfire.tscn" id="6_21xkr"]
+[ext_resource type="Script" uid="uid://dg1adhqevcy1a" path="res://Scripts/main.gd" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://mojn1v27vs35" path="res://Scenes/tree.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://j573r3fpylb3" path="res://Scenes/ui.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://btic7i3tl4ds8" path="res://Scenes/campfire.tscn" id="6_21xkr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("1_bo1nx")

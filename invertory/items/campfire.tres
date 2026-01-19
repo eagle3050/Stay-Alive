@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://tx5a2oy8kaxc"]
+
+[ext_resource type="Script" uid="uid://c3vgrmc4ewghj" path="res://invertory/invertory_item.gd" id="1_iyapk"]
+[ext_resource type="Texture2D" uid="uid://bjb3oywtm8scm" path="res://Assets/TinyRanch_Assets/pixil-frame-0(6).png" id="2_r1aj3"]
+
+[resource]
+script = ExtResource("1_iyapk")
+name = "Campfire"
+texture = ExtResource("2_r1aj3")
+metadata/_custom_type_script = "uid://c3vgrmc4ewghj"

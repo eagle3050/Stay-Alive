@@ -1,8 +1,10 @@
-res://ui.tscn
-res://Scenes/survival_stats.gd
-res://campfire.tscn
-res://campfire.gd
-res://Scenes/main.tscn
 res://Scenes/player.tscn
-res://Scenes/main.gd
 res://Scripts/player.gd
+res://intertory_ui.tscn
+res://intertory_ui.gd
+res://invertory/intertory_ui.tscn
+res://invertory/intertory_ui.gd
+res://inv_slot.tscn
+res://inv_slot.gd
+res://Scenes/campfire.tscn
+res://invertory/items/campfire.tres
