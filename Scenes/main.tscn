@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c48unokxilikk"]
+[gd_scene load_steps=9 format=3 uid="uid://c48unokxilikk"]
 
 [ext_resource type="Texture2D" uid="uid://b2eigc7bao5bw" path="res://Assets/TinyRanch_Assets/TinyFarm_Tiles.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://cmctx0bhktukh" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://dg1adhqevcy1a" path="res://Scenes/main.gd" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://mojn1v27vs35" path="res://tree.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://j573r3fpylb3" path="res://ui.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://btic7i3tl4ds8" path="res://campfire.tscn" id="6_21xkr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("1_bo1nx")
@@ -400,6 +401,9 @@ offset_bottom = 72.0
 color = Color(0, 0, 0, 0.7254902)
 
 [node name="UI" parent="." instance=ExtResource("4_jjvhh")]
+
+[node name="Campfire" parent="." instance=ExtResource("6_21xkr")]
+position = Vector2(-124, -23)
 
 [connection signal="timeout" from="World/DayTimer" to="." method="_on_day_timer_timeout"]
 [connection signal="timeout" from="World/NightTimer" to="." method="_on_night_timer_timeout"]

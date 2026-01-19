@@ -46,7 +46,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
 radius = 3.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_mask = 2
 script = ExtResource("1_onrkg")
 
@@ -71,5 +71,9 @@ ignore_time_scale = true
 [node name="HealthTimer" type="Timer" parent="SurvivalStats"]
 ignore_time_scale = true
 
+[node name="ColdHealthTimer" type="Timer" parent="SurvivalStats"]
+ignore_time_scale = true
+
 [connection signal="timeout" from="SurvivalStats/DecreaseTimer" to="SurvivalStats" method="_on_decrease_timer_timeout"]
 [connection signal="timeout" from="SurvivalStats/HealthTimer" to="SurvivalStats" method="_on_health_timer_timeout"]
+[connection signal="timeout" from="SurvivalStats/ColdHealthTimer" to="SurvivalStats" method="_on_cold_health_timer_timeout"]

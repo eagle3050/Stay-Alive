@@ -1,7 +1,8 @@
-res://Scenes/main.tscn
-res://Scripts/GlobalStats.gd
-res://Scenes/main.gd
-res://Scenes/survival_stats.gd
-res://Scenes/player.tscn
 res://ui.tscn
-res://ui.gd
+res://Scenes/survival_stats.gd
+res://campfire.tscn
+res://campfire.gd
+res://Scenes/main.tscn
+res://Scenes/player.tscn
+res://Scenes/main.gd
+res://Scripts/player.gd

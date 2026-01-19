@@ -31,15 +31,21 @@ func _process(_delta: float) -> void:
 	if health <= 0:
 		player.die()
 	
-	if GlobalStats.night_time == true:
-		stat_dmg = 2
+	if cold:
 		cold = true
-		if $HealthTimer.is_stopped():
-			$HealthTimer.start()
+		stat_dmg = 2
+	
+		if $ColdHealthTimer.is_stopped() and cold:
+			$ColdHealthTimer.start()
 	else:
-		$HealthTimer.stop()
+		$ColdHealthTimer.stop()
 		cold = false
 
 func _on_health_timer_timeout() -> void:
 	started_health_timer = false
 	health = max(0, health - stat_dmg)
+
+
+func _on_cold_health_timer_timeout() -> void:
+	if cold:
+		health = max(0, health - stat_dmg)

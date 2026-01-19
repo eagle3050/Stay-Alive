@@ -24,3 +24,11 @@ func handle_anim():
 func die():
 	hide()
 	print("dead")
+	
+func placing_campfire():
+	var campfire = preload("res://campfire.tscn")
+	#INVERTORY CHECKING IF ENOUGH MATERIALS LOGIC
+	if Input.is_action_just_pressed("place"): #AND ENOUGH MATERIALS
+		var campfire_scene = campfire.instantiate()
+		campfire_scene.global_position = get_global_mouse_position()
+		get_parent().add_child(campfire)
