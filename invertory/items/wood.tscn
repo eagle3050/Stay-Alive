@@ -1,20 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://cv7d5ck7vro2r"]
 
-[ext_resource type="Texture2D" uid="uid://bei1tet8fjg2y" path="res://Assets/wood.png" id="1_mnjol"]
 [ext_resource type="Script" uid="uid://biash80mu8ead" path="res://invertory/items/wood.gd" id="1_wnjja"]
 [ext_resource type="Resource" uid="uid://c6cjeg1p3h7t8" path="res://invertory/items/wood.tres" id="2_jjuco"]
+[ext_resource type="Texture2D" uid="uid://jtm5n0w6kbgr" path="res://Assets/wood2.png" id="3_jjuco"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mnjol"]
-radius = 3.0
+radius = 7.0
 
 [node name="Wood" type="Area2D"]
 script = ExtResource("1_wnjja")
 item = ExtResource("2_jjuco")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_mnjol")
+texture = ExtResource("3_jjuco")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_mnjol")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

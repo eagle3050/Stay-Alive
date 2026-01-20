@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://j573r3fpylb3"]
+[gd_scene load_steps=3 format=3 uid="uid://j573r3fpylb3"]
 
 [ext_resource type="Script" uid="uid://00k0a0v0bxyw" path="res://Scripts/ui.gd" id="1_fyqef"]
+[ext_resource type="PackedScene" uid="uid://c1lsuiviqmkmb" path="res://invertory/intertory_ui.tscn" id="2_qdvrb"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_fyqef")
@@ -49,3 +50,10 @@ offset_top = 125.0
 offset_right = 72.0
 offset_bottom = 148.0
 text = "Day: 99"
+
+[node name="Intertory_UI" parent="." instance=ExtResource("2_qdvrb")]
+offset_left = 407.00006
+offset_top = 561.0
+offset_right = -633.1841
+offset_bottom = 4.8239746
+scale = Vector2(5, 5)

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://c6cjeg1p3h7t8"]
 
 [ext_resource type="Script" uid="uid://c3vgrmc4ewghj" path="res://invertory/invertory_item.gd" id="1_uq5uf"]
-[ext_resource type="Texture2D" uid="uid://bei1tet8fjg2y" path="res://Assets/wood.png" id="2_rlyq8"]
+[ext_resource type="Texture2D" uid="uid://jtm5n0w6kbgr" path="res://Assets/wood2.png" id="2_rlyq8"]
 
 [resource]
 script = ExtResource("1_uq5uf")

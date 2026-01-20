@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bei1tet8fjg2y"
-path="res://.godot/imported/wood.png-5644a46ff2f5a24d6ebbaf579af6e32b.ctex"
+uid="uid://bt7qlvnl5nat8"
+path="res://.godot/imported/slot-frame.png-6d14aab00a707c2cd8519625da1dc77c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/wood.png"
-dest_files=["res://.godot/imported/wood.png-5644a46ff2f5a24d6ebbaf579af6e32b.ctex"]
+source_file="res://Assets/slot-frame.png"
+dest_files=["res://.godot/imported/slot-frame.png-6d14aab00a707c2cd8519625da1dc77c.ctex"]
 
 [params]
 

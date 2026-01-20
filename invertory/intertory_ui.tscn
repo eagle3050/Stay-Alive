@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1lsuiviqmkmb"]
+[gd_scene load_steps=6 format=3 uid="uid://c1lsuiviqmkmb"]
 
 [ext_resource type="Script" uid="uid://lojpvkhaacys" path="res://invertory/intertory_ui.gd" id="1_w7jx4"]
-[ext_resource type="Texture2D" uid="uid://cf6lh4rn7gwdm" path="res://Assets/inventory-background.png" id="2_hdtep"]
+[ext_resource type="Resource" uid="uid://tx5a2oy8kaxc" path="res://invertory/items/campfire.tres" id="2_6y4ax"]
+[ext_resource type="Resource" uid="uid://cmum3kx1kv4xn" path="res://invertory/player_inv.tres" id="3_3kjxn"]
 [ext_resource type="PackedScene" uid="uid://cihf14fou10s8" path="res://invertory/inv_slot.tscn" id="3_ipgnx"]
+[ext_resource type="Texture2D" uid="uid://d0avh123h3ecx" path="res://Assets/bg.png" id="4_3kjxn"]
 
 [node name="Intertory_UI" type="Control"]
 custom_minimum_size = Vector2(44, 51)
@@ -14,12 +16,14 @@ offset_bottom = -556.176
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w7jx4")
+campfire_item = ExtResource("2_6y4ax")
+player_inventory = ExtResource("3_3kjxn")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 44.0
-offset_bottom = 51.0
-texture = ExtResource("2_hdtep")
+offset_right = 74.0
+offset_bottom = 12.0
+texture = ExtResource("4_3kjxn")
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
@@ -32,13 +36,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -22.0
-offset_right = 16.0
-offset_bottom = 22.0
+offset_left = -34.0
+offset_top = -4.5
+offset_right = 34.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 3
+columns = 9
 
 [node name="InvSlot1" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ipgnx")]
 layout_mode = 2
@@ -58,20 +62,31 @@ layout_mode = 2
 [node name="InvSlot6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ipgnx")]
 layout_mode = 2
 
-[node name="InvSlot7" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ipgnx")]
-layout_mode = 2
+[node name="0" type="Marker2D" parent="NinePatchRect"]
+position = Vector2(7, 8)
 
-[node name="InvSlot8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ipgnx")]
-layout_mode = 2
+[node name="1" type="Marker2D" parent="NinePatchRect"]
+position = Vector2(19, 8)
 
-[node name="InvSlot9" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ipgnx")]
-layout_mode = 2
+[node name="2" type="Marker2D" parent="NinePatchRect"]
+position = Vector2(31, 8)
 
-[node name="InvSlot10" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ipgnx")]
-layout_mode = 2
+[node name="3" type="Marker2D" parent="NinePatchRect"]
+position = Vector2(43, 8)
 
-[node name="InvSlot11" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ipgnx")]
-layout_mode = 2
+[node name="4" type="Marker2D" parent="NinePatchRect"]
+position = Vector2(55, 8)
 
-[node name="InvSlot12" parent="NinePatchRect/GridContainer" instance=ExtResource("3_ipgnx")]
-layout_mode = 2
+[node name="5" type="Marker2D" parent="NinePatchRect"]
+position = Vector2(67, 8)
+
+[node name="CraftCampfire" type="Button" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 2.0
+offset_right = 196.0
+offset_bottom = 33.0
+scale = Vector2(0.5, 0.5)
+text = "Craft campfire"
+
+[connection signal="pressed" from="CraftCampfire" to="." method="_on_craft_campfire_pressed"]
