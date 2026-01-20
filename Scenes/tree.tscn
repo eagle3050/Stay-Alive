@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://mojn1v27vs35"]
+[gd_scene load_steps=6 format=3 uid="uid://mojn1v27vs35"]
 
 [ext_resource type="Texture2D" uid="uid://jgxly14umbig" path="res://Assets/TinyRanch_Assets/TinyFarm_MapDecorations.png" id="1_brfkd"]
+[ext_resource type="Script" uid="uid://bcselg37rok3k" path="res://Scenes/tree.gd" id="1_rsuno"]
+[ext_resource type="Resource" uid="uid://c6cjeg1p3h7t8" path="res://invertory/items/wood.tres" id="2_l7sa7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_brfkd"]
 radius = 4.2426405
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0vwjc"]
+radius = 25.019993
+
 [node name="Tree" type="StaticBody2D"]
 z_index = 10
 collision_layer = 2
+script = ExtResource("1_rsuno")
+item = ExtResource("2_l7sa7")
 
 [node name="Holder" type="Node2D" parent="."]
 
@@ -19,3 +26,13 @@ region_rect = Rect2(50, 16, 12, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
 shape = SubResource("CircleShape2D_brfkd")
+
+[node name="BreakArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakArea"]
+shape = SubResource("CircleShape2D_0vwjc")
+
+[node name="WoodSpawn" type="Marker2D" parent="."]
+position = Vector2(0, 13)
+
+[connection signal="body_entered" from="BreakArea" to="." method="_on_break_area_body_entered"]

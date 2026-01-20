@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://lojpvkhaacys" path="res://invertory/intertory_ui.gd" id="1_w7jx4"]
 [ext_resource type="Texture2D" uid="uid://cf6lh4rn7gwdm" path="res://Assets/inventory-background.png" id="2_hdtep"]
-[ext_resource type="PackedScene" uid="uid://cihf14fou10s8" path="res://inv_slot.tscn" id="3_ipgnx"]
+[ext_resource type="PackedScene" uid="uid://cihf14fou10s8" path="res://invertory/inv_slot.tscn" id="3_ipgnx"]
 
 [node name="Intertory_UI" type="Control"]
 custom_minimum_size = Vector2(44, 51)

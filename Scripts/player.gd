@@ -19,6 +19,8 @@ func _process(_delta: float) -> void:
 	var direction = Input.get_vector("left", "right", "up", "down").normalized()
 	velocity = direction * speed
 	move_and_slide()
+	if Input.is_action_just_pressed("debug"):
+		inv.append()
 
 func handle_anim():
 	if Input.is_action_just_pressed("left"):
@@ -48,3 +50,7 @@ func placing_items():
 		var mouse_pos = get_global_mouse_position()
 		campfire_scene.global_position = mouse_pos
 		get_parent().add_child(campfire_scene)
+		
+		
+func collect(item):
+	inv.insert(item)
