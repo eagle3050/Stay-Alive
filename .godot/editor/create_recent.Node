@@ -1,7 +1,10 @@
+DirectionalLight2D
+LightOccluder2D
+Control
+Sprite2D
 Marker2D
 Button
 CollisionShape2D
-Sprite2D
 Area2D
 Label
 Panel
@@ -10,5 +13,3 @@ GridContainer
 NinePatchRect
 ColorRect
 Timer
-PointLight2D
-Node2D

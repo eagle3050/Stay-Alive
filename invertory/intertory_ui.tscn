@@ -4,15 +4,16 @@
 [ext_resource type="Resource" uid="uid://tx5a2oy8kaxc" path="res://invertory/items/campfire.tres" id="2_6y4ax"]
 [ext_resource type="Resource" uid="uid://cmum3kx1kv4xn" path="res://invertory/player_inv.tres" id="3_3kjxn"]
 [ext_resource type="PackedScene" uid="uid://cihf14fou10s8" path="res://invertory/inv_slot.tscn" id="3_ipgnx"]
-[ext_resource type="Texture2D" uid="uid://d0avh123h3ecx" path="res://Assets/bg.png" id="4_3kjxn"]
+[ext_resource type="Texture2D" uid="uid://blwagvkaknpat" path="res://Assets/bg2.png" id="4_3kjxn"]
 
 [node name="Intertory_UI" type="Control"]
 custom_minimum_size = Vector2(44, 51)
 layout_mode = 3
 anchor_right = 0.96700007
 anchor_bottom = 0.93700004
-offset_right = -1069.9841
-offset_bottom = -556.176
+offset_top = -1.0
+offset_right = -1035.9841
+offset_bottom = -557.176
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w7jx4")
@@ -21,8 +22,9 @@ player_inventory = ExtResource("3_3kjxn")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 74.0
-offset_bottom = 12.0
+offset_top = 1.0
+offset_right = 78.0
+offset_bottom = 17.0
 texture = ExtResource("4_3kjxn")
 patch_margin_left = 6
 patch_margin_top = 6
@@ -36,10 +38,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -34.0
-offset_top = -4.5
-offset_right = 34.0
-offset_bottom = 4.0
+offset_left = -35.0
+offset_top = -5.0
+offset_right = 33.0
+offset_bottom = 3.5
 grow_horizontal = 2
 grow_vertical = 2
 columns = 9
@@ -80,13 +82,19 @@ position = Vector2(55, 8)
 [node name="5" type="Marker2D" parent="NinePatchRect"]
 position = Vector2(67, 8)
 
-[node name="CraftCampfire" type="Button" parent="."]
+[node name="Crafting" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CraftCampfire" type="Button" parent="Crafting"]
 layout_mode = 0
-offset_left = 76.0
-offset_top = 2.0
-offset_right = 196.0
-offset_bottom = 33.0
+offset_left = 9.0
+offset_top = -21.0
+offset_right = 129.0
+offset_bottom = 10.0
 scale = Vector2(0.5, 0.5)
 text = "Craft campfire"
 
-[connection signal="pressed" from="CraftCampfire" to="." method="_on_craft_campfire_pressed"]
+[connection signal="pressed" from="Crafting/CraftCampfire" to="." method="_on_craft_campfire_pressed"]

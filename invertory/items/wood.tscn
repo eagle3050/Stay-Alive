@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://biash80mu8ead" path="res://invertory/items/wood.gd" id="1_wnjja"]
 [ext_resource type="Resource" uid="uid://c6cjeg1p3h7t8" path="res://invertory/items/wood.tres" id="2_jjuco"]
-[ext_resource type="Texture2D" uid="uid://jtm5n0w6kbgr" path="res://Assets/wood2.png" id="3_jjuco"]
+[ext_resource type="Texture2D" uid="uid://cgo206ue5mmu6" path="res://Assets/wood.png" id="3_jjuco"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mnjol"]
 radius = 7.0

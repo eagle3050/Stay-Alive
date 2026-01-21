@@ -6,6 +6,7 @@ var is_open = false
 @export var campfire_item: InvItem # Drag your Campfire Resource here
 @export var player_inventory: Inv
 @onready var player = get_node("/root/Main/Player")
+var craft_ui_open = false
 
 func _ready() -> void:
 	inv.update.connect(update_slots)
@@ -16,9 +17,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 
 	if GlobalStats.wood_collected >= 10:
-		$CraftCampfire.show()
+		$Crafting/CraftCampfire.show()
 	else:
-		$CraftCampfire.hide()
+		$Crafting/CraftCampfire.hide()
 
 func update_slots():
 	for i in range(min(inv.slots.size(), slots.size())):
@@ -65,3 +66,18 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("6"):
 		print("6")
 		player.selected_slot_index = 5
+
+	if Input.is_action_just_pressed("craft_menu") and craft_ui_open:
+		craft_close()
+		
+	else:
+		#print("hhefl")
+		craft_open()
+
+func craft_open():
+	craft_ui_open = true
+	$Crafting.show()
+
+func craft_close():
+	craft_ui_open = false
+	$Crafting.hide()
